@@ -1,0 +1,147 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+	Layout = "mainLayout.cshtml";
+  	ViewBag.Title = Model?.Value("pageTitle");
+
+  var serviceDetailsMainImg = Model?.Value<IPublishedContent>("serviceDetailsMainImg")?.Url() ?? "";
+  
+  var serviceContentImg1 = Model?.Value<IPublishedContent>("serviceContentImg1")?.Url() ?? "";
+  var serviceContentImg2 = Model?.Value<IPublishedContent>("serviceContentImg2")?.Url() ?? "";
+  var serviceContentImg3 = Model?.Value<IPublishedContent>("serviceContentImg3")?.Url() ?? "";
+
+  var serviceDetailsProjectImg = Model?.Value<IPublishedContent>("serviceDetailsProjectImg")?.Url() ?? "";
+
+  
+}
+
+<section class="service-details-main">
+    <div class="service-details-container">
+      <div class="image-container">
+        <img src="@serviceDetailsMainImg">
+      </div>
+        <div class="service-details-text">
+          <h1>@Model.Value("serviceDetailsMainHeadline")</h1>
+          <a href="/">@Model.Value("serviceDetailsMainLink1")</a>
+          <i class="fa-light fa-arrow-right"></i>
+          <a href="/service-page/">@Model.Value("serviceDetailsMainLink2")</a>
+          <i class="fa-light fa-arrow-right"></i>
+          <a class="col" href="#">@Model.Value("serviceDetailsMainLink3")</a>
+        </div>
+    </div>
+  </section>
+
+  <section class="service-content">
+    <aside class="sidebar">
+      <div class="about-us">
+        <h4>@Model.Value("serviceContentHeadline1")</h4>
+        <img src="@serviceContentImg1">
+        <p>@Model.Value("serviceContentText1")</p>
+      </div>
+      <div class="help-frame">
+        <h4>@Model.Value("serviceContentHeadline2")</h4>
+        <p>@Model.Value("serviceContentText2")</p>
+        <form action="#" method="post" class="email-form">
+          <input type="email" placeholder="E-mail Address">
+          <button type="submit">
+            <i class="fa-solid fa-envelope"></i>
+          </button>
+        </form>
+      </div>
+    </aside>
+    <div class="content-info">
+      <div class="text-1">
+        <img src="@serviceContentImg2">
+        <h4>@Model.Value("serviceContentHeadline3")</h4>
+        <ul>
+          <li>
+            <p>@Model.Value("serviceContentText3")</p>
+          </li>
+          <li>
+            <p>@Model.Value("serviceContentText4")</p>
+          </li>
+          <li>
+            <p>@Model.Value("serviceContentText5")</p>
+          </li>
+        </ul>
+      </div>
+      <div class="text-2">
+        <h4>@Model.Value("serviceContentHeadline4")</h4>
+        <p>@Model.Value("serviceContentText6")</p>
+        <p>@Model.Value("serviceContentText7")</p>
+        <p>@Model.Value("serviceContentText8")</p>
+        <ul>
+          <li>
+            <p>@Model.Value("serviceContentText9")</p>
+          </li>
+          <li>
+            <p>@Model.Value("serviceContentText10")</p>
+          </li>
+          <li>
+            <p>@Model.Value("serviceContentText11")</p>
+          </li>
+        </ul>
+        <p>@Model.Value("serviceContentText12")</p>
+        <p>@Model.Value("serviceContentText13")</p>
+        <img src="@serviceContentImg3">
+      </div>
+      <div class="text-3">
+        <h4>@Model.Value("serviceContentHeadline5")</h4>
+        <p>@Model.Value("serviceContentText14")</p>
+        <ul>
+          <li>
+            <p>@Model.Value("serviceContentText15")</p>
+          </li>
+          <li>
+            <p>@Model.Value("serviceContentText16")</p>
+          </li>
+          <li>
+            <p>@Model.Value("serviceContentText17")</p>
+          </li>
+          <li>
+            <p>@Model.Value("serviceContentText18")</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    
+    <div class="contact-section">
+      <div class="title">
+        <h4>@Model.Value("serviceContentHeadline6")</h4>
+      </div>
+      <form action="#" method="post" class="service-form">
+        <div class="form-row">
+          <input type="text" name="name" placeholder="Name" class="input-field input-name" />
+          <input type="email" name="email" placeholder="Email" class="input-field input-email" />
+        </div>
+        <textarea name="question" placeholder="Question" class="input-field input-question"></textarea>
+        <button class="btn-primary" type="submit">@Model.Value("serviceContentButtonText")</button>
+      </form>
+    </div>
+</section>
+
+<section class="service-details-project">
+    <div class="container">
+      <div class="container-left">
+        <img src="@serviceDetailsProjectImg">
+      </div>
+      <div class="container-right">
+        <div class="title">
+          <h2>@Model.Value("serviceDetailsProjectHeadline")</h2>
+        </div>
+        <div class="location">
+          <i class="fa-regular fa-location-dot"></i><span>@Model.Value("serviceDetailsProjectText1")</span>
+          <p>@Model.Value("serviceDetailsProjectText2")</p>
+        </div>
+        <div class="phone">
+          <i class="fa-regular fa-phone"></i><span>@Model.Value("serviceDetailsProjectText3")</span>
+          <p>@Model.Value("serviceDetailsProjectText4")</p>
+        </div> 
+        <div class="email">
+          <i class="fa-regular fa-envelope"></i><span>@Model.Value("serviceDetailsProjectText5")</span>
+          <p>@Model.Value("serviceDetailsProjectText6")</p>
+        </div> 
+    </div>
+  </section>
+  

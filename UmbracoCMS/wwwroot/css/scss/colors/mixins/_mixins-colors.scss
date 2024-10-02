@@ -1,0 +1,83 @@
+@mixin button-colors($bg-color, $text-color, $hover-bg-color, $hover-text-color, $border-color: null, $hover-border-color: null) {
+    background-color: $bg-color;
+    color: $text-color;
+    border-color: if($border-color, $border-color, $bg-color);
+    outline: none !important;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+
+    &:hover {
+        background-color: $hover-bg-color;
+        color: $hover-text-color;
+        border-color: if($hover-border-color, $hover-border-color, $hover-bg-color);
+    }
+
+    &:hover, &:focus, &:active {
+        outline: none !important;
+    }
+}
+
+@mixin theme-buttons($bg-color, $btn-dark-colors, $btn-primary-colors, $btn-secondary-colors, $btn-accent-colors, $btn-gray-colors, $btn-light-colors, $btn-menu-colors) {
+    .bg-#{$bg-color} {
+        .btn-dark {
+            @include button-colors($btn-dark-colors...);
+        }
+
+        .btn-primary {
+            @include button-colors($btn-primary-colors...);
+        }
+
+        .btn-secondary {
+            @include button-colors($btn-secondary-colors...);
+        }
+
+        .btn-accent {
+            @include button-colors($btn-accent-colors...);
+        }
+
+        .btn-gray {
+            @include button-colors($btn-gray-colors...);
+        }
+
+        .btn-light {
+            @include button-colors($btn-light-colors...);
+        }
+
+        .btn-menu {
+            @include button-colors($btn-menu-colors...);
+        }
+    }
+}
+
+@mixin heading-colors($h1-color, $h2-color, $h3-color, $h4-color, $h5-color, $h6-color) {
+    h1 {
+        color: $h1-color;
+    }
+
+    h2 {
+        color: $h2-color;
+    }
+
+    h3 {
+        color: $h3-color;
+    }
+
+    h4 {
+        color: $h4-color;
+    }
+
+    h5 {
+        color: $h5-color;
+    }
+
+    h6 {
+        color: $h6-color;
+    }
+}
+
+@mixin theme-headings($bg-color, $h1-color, $h2-color, $h3-color, $h4-color, $h5-color, $h6-color) {
+    .bg-#{$bg-color} {
+        @include heading-colors($h1-color, $h2-color, $h3-color, $h4-color, $h5-color, $h6-color);
+    }
+}

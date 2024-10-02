@@ -1,0 +1,97 @@
+.header {
+    margin-top: -0.5em;
+    width: 100%;
+
+    .topbar {
+        background-color: #4F5955;
+
+
+        p {
+            font-family: "Poppins", sans-serif;
+            color: #FFFFFF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 67em;
+            position: relative;
+            top: 1rem;
+            margin-bottom: -0.5em;
+        }
+
+        .socials {
+            display: flex;
+            justify-content: end;
+            height: 100%;
+            margin-right: 25em;
+            position: relative;
+            bottom: 0.8em;
+
+
+
+            a {
+                padding: 0 1em;
+                border-left: 1px solid #606966;
+                display: grid;
+                align-items: center;
+                color: #FFFFFF;
+
+
+
+
+                &:last-child {
+                    border-right: 1px solid #606966;
+                }
+
+                &:hover {
+                    background-color: #606966;
+                }
+            }
+        }
+    }
+
+    .header-menu {
+
+
+
+        img {
+            margin-left: 17em;
+            margin-top: 2em;
+
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        .info-menu {
+            display: flex;
+            justify-content: end;
+            height: 100%;
+            margin-right: 37em;
+            gap: 5em;
+            position: relative;
+            bottom: 2em;
+            right: 6em;
+
+
+
+
+            a {
+                color: #4F5955;
+                font-family: "Poppins", sans-serif;
+                font-weight: 700;
+                font-style: normal;
+                margin-left: 1em;
+
+                &:hover {
+                    color: #D9C3A9;
+                }
+            }
+        }
+
+        .search {
+            position: relative;
+            left: 17em;
+        }
+    }
+}

@@ -1,0 +1,101 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+	Layout = "mainLayout.cshtml";
+  ViewBag.Title = Model?.Value("pageTitle");
+
+  var serviceMainImage = Model?.Value<IPublishedContent>("serviceMainImage")?.Url() ?? "";
+
+  var serviceBoxImage1 = Model?.Value<IPublishedContent>("serviceBoxImage1")?.Url() ?? "";
+  var serviceBoxImage2 = Model?.Value<IPublishedContent>("serviceBoxImage2")?.Url() ?? "";
+  var serviceBoxImage3 = Model?.Value<IPublishedContent>("serviceBoxImage3")?.Url() ?? "";
+  var serviceBoxImage4 = Model?.Value<IPublishedContent>("serviceBoxImage4")?.Url() ?? "";
+  var serviceBoxImage5 = Model?.Value<IPublishedContent>("serviceBoxImage5")?.Url() ?? "";
+  var serviceBoxImage6 = Model?.Value<IPublishedContent>("serviceBoxImage6")?.Url() ?? "";
+
+  var serviceProjectImage = Model?.Value<IPublishedContent>("serviceProjectImage")?.Url() ?? "";
+
+
+}
+
+<section class="service-main">
+    <div class="service-main-container">
+      <div class="image-container">
+        <img src="@serviceMainImage">
+      </div>
+        <div class="service-text">
+          <h1>@Model.Value("serviceMainHeadline")</h1>
+          <a href="/">@Model.Value("serviceLinkHome")</a>
+          <i class="fa-light fa-arrow-right"></i>
+          <a class="col" href="/service-details/">@Model.Value("serviceLinkServices")</a>
+        </div>
+    </div>
+  </section>
+
+<section class="services">
+      <div class="title">
+        <h2>@Model.Value("serviceHeadline")</h2>
+      </div>
+      <div class="businesses">
+        <div class="box">
+          <h5>@Model.Value("serviceHeadline1")</h5>
+          <img src="@serviceBoxImage1">
+          <p>@Model.Value("serviceBoxText1")</p>
+        </div>
+        <div class="box">
+          <h5>@Model.Value("serviceHeadline2")</h5>
+          <img src="@serviceBoxImage2">
+          <p>@Model.Value("serviceBoxText2")</p>
+        </div>
+        <div class="box">
+          <h5>@Model.Value("serviceHeadline3")</h5>
+          <img src="@serviceBoxImage3">
+          <p>@Model.Value("serviceBoxText3")</p>
+        </div>
+        <div class="box">
+          <h5>@Model.Value("serviceHeadline4")</h5>
+          <img src="@serviceBoxImage4">
+          <p>@Model.Value("serviceBoxText4")</p>
+        </div>
+        <div class="box">
+          <h5>@Model.Value("serviceHeadline5")</h5>
+          <img src="@serviceBoxImage5">
+          <p>@Model.Value("serviceBoxText5")</p>
+        </div>
+        <div class="box">
+          <h5>@Model.Value("serviceHeadline6")</h5>
+          <img src="@serviceBoxImage6">
+          <p>@Model.Value("serviceBoxText6")</p>
+        </div>
+      </div>
+        <div class="pagination">
+          <a href="#" class="prev">Prev</a>
+          <a href="#" class="page active">1</a>
+          <a href="#" class="page">2</a>
+          <a href="#" class="next">Next</a>
+        </div>
+    </section>
+
+     <section class="service-project">
+      <div class="container">
+        <div class="container-left">
+          <img src="@serviceProjectImage">
+        </div>
+        <div class="container-right">
+          <div class="title">
+            <h2>@Model.Value("serviceProjectHeadline")</h2>
+          </div>
+          <div class="location">
+            <i class="fa-regular fa-location-dot"></i><span>@Model.Value("serviceProjectLocation")</span>
+            <p>@Model.Value("serviceLocationText1")</p>
+          </div>
+          <div class="phone">
+            <i class="fa-regular fa-phone"></i><span>@Model.Value("serviceProjectPhone")</span>
+            <p>@Model.Value("servicePhoneText")</p>
+          </div> 
+          <div class="email">
+            <i class="fa-regular fa-envelope"></i><span>@Model.Value("serviceProjectEmail")</span>
+            <p>@Model.Value("serviceEmailText")</p>
+          </div> 
+      </div>
+    </section>

@@ -1,0 +1,36 @@
+@import "mixins/mixins-content";
+@import "mixins/mixins-media";
+@import "mixins/mixins-buttons";
+@import "mixins/mixins-typography";
+
+@import "colors/mixins/mixins-colors";
+@import "colors/colors";
+@import "colors/backgrounds";
+@import "colors/base";
+@import "colors/buttons";
+@import "colors/headings";
+@import "colors/links";
+
+@import "components/buttons-components";
+@import "components/links";
+@import "components/typography";
+
+@import "layout/wrapper";
+@import "layout/header";
+@import "layout/footer";
+
+
+@import "pages/home/hero";
+@import "pages/home/about-us";
+@import "pages/home/ourservices";
+@import "pages/home/clients";
+@import "pages/home/storys";
+@import "pages/home/projects-home";
+@import "pages/home/partners";
+
+@import "pages/about";
+@import "pages/services";
+@import "pages/service-details";
+@import "pages/projects";
+@import "pages/project-details";
+@import "pages/contact";

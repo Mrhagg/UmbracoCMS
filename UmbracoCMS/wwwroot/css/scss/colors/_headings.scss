@@ -1,0 +1,3 @@
+@include heading-colors ( $color-primary, $color-primary, $color-secondary, $color-primary, $color-primary, $color-secondary );
+
+@include theme-headings ( 'dark', $color-primary, $color-primary, $color-secondary, $color-primary, $color-primary, $color-secondary );

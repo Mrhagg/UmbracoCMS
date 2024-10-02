@@ -1,0 +1,119 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+	Layout = "mainLayout.cshtml";
+	ViewBag.Title = Model?.Value("pageTitle");
+
+  var projectsMainImage = Model?.Value<IPublishedContent>("projectsMainImage")?.Url() ?? "";
+  var projectContentImage1 = Model?.Value<IPublishedContent>("projectContentImage1")?.Url() ?? "";
+  var projectContentImage2 = Model?.Value<IPublishedContent>("projectContentImage2")?.Url() ?? "";
+  var projectContentImage3 = Model?.Value<IPublishedContent>("projectContentImage3")?.Url() ?? "";
+  var projectContentImage4 = Model?.Value<IPublishedContent>("projectContentImage4")?.Url() ?? "";
+
+  var projectContactImage = Model?.Value<IPublishedContent>("projectContactImage")?.Url() ?? "";
+}
+
+<section class="projects-main">
+    <div class="projects-main-container">
+      <div class="image-container">
+        <img src="@projectsMainImage">
+      </div>
+        <div class="projects-text">
+          <h1>@Model.Value("projectsMainHeadline")</h1>
+          <a href="/">@Model.Value("projectsLinkHome")</a>
+          <i class="fa-light fa-arrow-right"></i>
+          <a class="col" href="/projects-details-page/">@Model.Value("projectsLinkServices")</a>
+        </div>
+    </div>
+  </section>
+
+  <section class="project-content">
+    <div class="container">
+      <div class="container-left">
+        <div class="img-project">
+          <img src="@projectContentImage1">
+          <div class="container-text">
+            <h4>@Model.Value("projectContentHeadline1")</h4>
+            <i class="fa-solid fa-calendar-days"></i>@Model.Value("projectContentText1")
+            <p>@Model.Value("projectContentText2")</p>
+            <h5>@Model.Value("projectContentHeadline2")<i class="fa-light fa-arrow-right"></i></h5>
+          </div>
+        </div>
+        <div class="img-project">
+          <img src="@projectContentImage2">
+          <div class="container-text">
+            <h4>@Model.Value("projectContentHeadline3")</h4>
+            <i class="fa-solid fa-calendar-days"></i>@Model.Value("projectContentText3")
+            <p>@Model.Value("projectContentText4")</p>
+            <h5>@Model.Value("projectContentHeadline4")<i class="fa-light fa-arrow-right"></i></h5>
+          </div>
+        </div>
+        <div class="img-project">
+          <img src="@projectContentImage3">
+          <div class="container-text">
+            <h4>@Model.Value("projectContentHeadline5")</h4>
+            <i class="fa-solid fa-calendar-days"></i>@Model.Value("projectContentText5")
+            <p>@Model.Value("projectContentText6")</p>
+            <h5>@Model.Value("projectContentHeadline6")<i class="fa-light fa-arrow-right"></i></h5>
+          </div>
+        </div>
+        <div class="img-project">
+          <img src="@projectContentImage4">
+          <div class="container-text">
+            <h4>@Model.Value("projectContentHeadline7")</h4>
+            <i class="fa-solid fa-calendar-days"></i>@Model.Value("projectContentText7")
+            <p>@Model.Value("projectContentText8")</p>
+            <h5>@Model.Value("projectContentHeadline8")<i class="fa-light fa-arrow-right"></i></h5>
+          </div>
+        </div>
+      </div>
+      <div class="container-right">
+        <h5>@Model.Value("projectContentHeadline9")</h5>
+        <div class="tag-holder">
+          <p class="tag">@Model.Value("projectContentText9")</p>
+          <p class="tag">@Model.Value("projectContentText10")</p>
+          <p class="tag">@Model.Value("projectContentText11")</p>
+          <p class="tag">@Model.Value("projectContentText12")</p>
+          <p class="tag">@Model.Value("projectContentText13")</p>
+          <p class="tag">@Model.Value("projectContentText14")</p>
+          <p class="tag">@Model.Value("projectContentText15")</p>
+          <p class="tag">@Model.Value("projectContentText16")</p>
+        </div>
+        <div class="help-frame">
+          <h4>@Model.Value("projectContentHeadline10")</h4>
+          <p>@Model.Value("projectContentText17")</p>
+          <form action="#" method="post" class="email-form">
+            <input type="email" placeholder="E-mail Address">
+            <button type="submit">
+              <i class="fa-solid fa-envelope"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+</section>
+
+<section class="projects">
+  <div class="container">
+    <div class="container-left">
+      <img src="@projectContactImage">
+    </div>
+    <div class="container-right">
+      <div class="title">
+        <h2>@Model.Value("projectContactHeadline")</h2>
+      </div>
+      <div class="location">
+        <i class="fa-regular fa-location-dot"></i><span>@Model.Value("projectContactText1")</span>
+        <p>@Model.Value("projectContactText2")</p>
+      </div>
+      <div class="phone">
+        <i class="fa-regular fa-phone"></i><span>@Model.Value("projectContactText3")</span>
+        <p>@Model.Value("projectContactText4")</p>
+      </div> 
+      <div class="email">
+        <i class="fa-regular fa-envelope"></i><span>@Model.Value("projectContactText5")</span>
+        <p>@Model.Value("projectContactText6")</p>
+      </div> 
+  </div>
+</section>
+

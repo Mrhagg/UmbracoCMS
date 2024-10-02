@@ -1,0 +1,82 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+	Layout = "mainLayout.cshtml";
+  ViewBag.Title = Model?.Value("pageTitle");
+
+  var contactMainImg = Model?.Value<IPublishedContent>("contactMainImg")?.Url() ?? "";
+  
+  var contactProjectImg = Model?.Value<IPublishedContent>("contactProjectImg")?.Url() ?? "";
+
+  var contactMapImg = Model?.Value<IPublishedContent>("contactMapImg")?.Url() ?? "";
+  var contactPartnersImg = Model?.Value<IPublishedContent>("contactPartnersImg")?.Url() ?? "";
+
+}
+
+<section class="contact">
+  <div class="contact-container">
+    <div class="image-container">
+      <img src="@contactMainImg">
+    </div>
+      <div class="contact-text">
+        <h1>@Model.Value("contactMainHeadline")</h1>
+        <a href="/">@Model.Value("contactMainLink1")</a>
+        <i class="fa-light fa-arrow-right"></i>
+        <a class="col" href="#">@Model.Value("contactMainLink2")</a>
+      </div>
+  </div>
+</section>
+
+<section class="projects-contact">
+  <div class="container">
+    <div class="container-left">
+      <img src="@contactProjectImg">
+    </div>
+    <div class="container-right">
+      <div class="title">
+        <h2>@Model.Value("contactProjectHeadline")</h2>
+      </div>
+      <div class="location">
+        <i class="fa-regular fa-location-dot"></i><span>@Model.Value("contactProjectText1")</span>
+        <p>@Model.Value("contactProjectText2")</p>
+      </div>
+      <div class="phone">
+        <i class="fa-regular fa-phone"></i><span>@Model.Value("contactProjectText3")</span>
+        <p>@Model.Value("contactProjectText4")</p>
+      </div> 
+      <div class="email">
+        <i class="fa-regular fa-envelope"></i><span>@Model.Value("contactProjectText5")</span>
+        <p>@Model.Value("contactProjectText6")</p>
+      </div> 
+  </div>
+</section>
+
+<section class="img-map">
+  <img src="@contactMapImg">
+  <div class="contact-form-holder">
+    <div class="title-holder">
+      <h6 class="text-label">@Model.Value("contactFormHeadline")</h6>
+      <h2>@Model.Value("contactFormHeadline2")</h2>
+      <p>@Model.Value("contactFormText")</p>
+    </div>
+    <form action="#">
+      <input type="text" placeholder="Name">
+      <input type="text" placeholder="Phone">
+      <input type="text" placeholder="Email Address">
+      
+      <select class="input-type">
+        <option value="financial-consulting">@Model.Value("contactInputText1")</option>
+        <option value="business-strategy">@Model.Value("contactInputText2")</option>
+        <option value="marketing">@Model.Value("contactInputText3")</option>
+        <option value="other">@Model.Value("contactInputText4")</option>
+      </select>
+      <button class="btn-primary">@Model.Value("contactButtonText")</button>
+    </form>
+  </div>
+</section>
+
+<section>
+  <div class="logo-img">
+    <img src="@contactPartnersImg">
+  </div>
+</section>

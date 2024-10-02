@@ -1,0 +1,144 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+	Layout = "mainLayout.cshtml";
+  ViewBag.Title = Model?.Value("pageTitle");
+
+  var aboutBkgImg = Model?.Value<IPublishedContent>("aboutBkgImg")?.Url() ?? "";
+  var storyImg = Model?.Value<IPublishedContent>("storyImg")?.Url() ?? "";
+
+  var reviewsRatingImg = Model?.Value<IPublishedContent>("reviewsRatingImg")?.Url() ?? "";
+  var reviewsKevinImg = Model?.Value<IPublishedContent>("reviewsKevinImg")?.Url() ?? "";
+
+  var teamsBoxImage1 = Model?.Value<IPublishedContent>("teamsBoxImage1")?.Url() ?? "";
+  var teamsBoxImage2 = Model?.Value<IPublishedContent>("teamsBoxImage2")?.Url() ?? "";
+  var teamsBoxImage3 = Model?.Value<IPublishedContent>("teamsBoxImage3")?.Url() ?? "";
+  var teamsBoxImage4 = Model?.Value<IPublishedContent>("teamsBoxImage4")?.Url() ?? "";
+  var teamsBoxImage5 = Model?.Value<IPublishedContent>("teamsBoxImage5")?.Url() ?? "";
+  var teamsBoxImage6 = Model?.Value<IPublishedContent>("teamsBoxImage6")?.Url() ?? "";
+  var teamsBoxImage7 = Model?.Value<IPublishedContent>("teamsBoxImage7")?.Url() ?? "";
+
+  var projectImage = Model?.Value<IPublishedContent>("projectImage")?.Url() ?? "";
+
+}
+
+<section class="about">
+    <div class="about-container">
+      <div class="image-container">
+        <img src="@aboutBkgImg">
+      </div>
+        <div class="about-text">
+          <h1>@Model?.Value("aboutUsHeadline")</h1>
+          <a href="/">@Model?.Value("aboutHomeLink")</a>
+          <i class="fa-light fa-arrow-right"></i>
+          <a class="col" href="#">@Model?.Value("aboutLink")</a>
+        </div>
+    </div>
+  </section>
+
+  <section class="text-story">
+    <div class="container">
+      <div class="container-left">
+        <img src="@storyImg">
+        <p>@Model.Value("storytText")</p>
+      </div>
+      <div class="container-right">
+        <p class="cursive">@Model.Value("storyQuote")</p>
+        <p>@Model.Value("storyText1")</p>
+        <p>@Model.Value("storyText2")</p>
+        <p>@Model.Value("storyText3")</p>
+        <p>@Model.Value("storyText4")</p>
+        <p>@Model.Value("storyText5")</p>
+        <p>@Model.Value("storyText6")</p>
+        <p>@Model.Value("storyText7")</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="reviews">
+    <div class="container">
+      <div class="left-container">
+       <p class="accent">@Model.Value("reviewsTitle")</p>
+       <h2>@Model.Value("reviewsHeadline")</h2>
+       <span class="cursive">@Model.Value("reviewsQuote")</span> 
+       <img src="@reviewsRatingImg">
+       <p class="kevin">@Model.Value("reviewsText")</p>
+       <h6>@Model.Value("reviewsHeadline2")</h6>
+      </div>
+      <div class="right-container">
+        <img src="@reviewsKevinImg">
+      </div>
+    </div>
+  </section>
+
+  <section class="teams">
+    <div class="container">
+      <div class="title">
+        <p>@Model.Value("teamsTitle")</p>
+        <h2>@Model.Value("teamsHeadline")</h2>
+      </div>
+      <div class="experts">
+        <div class="box">
+          <img src="@teamsBoxImage1">
+          <h4>@Model.Value("teamsBoxHeadline1")</h4>
+          <p>@Model.Value("teamsBoxText1")</p>
+        </div>
+        <div class="box">
+          <img src="@teamsBoxImage2">
+          <h4>@Model.Value("teamsBoxHeadline2")</h4>
+          <p>@Model.Value("teamsBoxText2")</p>
+        </div>
+        <div class="box">
+          <img src="@teamsBoxImage3">
+          <h4>@Model.Value("teamsBoxHeadline3")</h4>
+          <p>@Model.Value("teamsBoxText3")</p>
+        </div>
+      </div>
+      <div class="experts2">
+        <div class="box">
+          <img src="@teamsBoxImage4">
+          <h4>@Model.Value("teamsBoxHeadline4")</h4>
+          <p>@Model.Value("teamsBoxText4")</p>
+        </div>
+        <div class="box">
+          <img src="@teamsBoxImage5">
+          <h4>@Model.Value("teamsBoxHeadline5")</h4>
+          <p>@Model.Value("teamsBoxText5")</p>
+        </div>
+        <div class="box">
+          <img src="@teamsBoxImage6">
+          <h4>@Model.Value("teamsBoxHeadline6")</h4>
+          <p>@Model.Value("teamsBoxText6")</p>
+        </div>
+        <div class="box">
+          <img src="@teamsBoxImage7">
+          <h4>@Model.Value("teamsBoxHeadline7")</h4>
+          <p>@Model.Value("teamsBoxText7")</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="project">
+    <div class="container">
+      <div class="container-left">
+        <img src="@projectImage">
+      </div>
+      <div class="container-right">
+        <div class="title">
+          <h2>@Model.Value("projectHeadline")</h2>
+        </div>
+        <div class="location">
+          <i class="fa-regular fa-location-dot"></i><span>@Model.Value("projectLocation")</span>
+          <p>@Model.Value("projectLocationText")</p>
+        </div>
+        <div class="phone">
+          <i class="fa-regular fa-phone"></i><span>@Model.Value("projectNumber")</span>
+          <p>@Model.Value("projectNumberText")</p>
+        </div> 
+        <div class="email">
+          <i class="fa-regular fa-envelope"></i><span>@Model.Value("projectEmail")</span>
+          <p>@Model.Value("projectEmailText")</p>
+        </div> 
+    </div>
+  </section>

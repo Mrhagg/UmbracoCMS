@@ -1,0 +1,179 @@
+.main {
+    margin-top: -6em;
+
+
+    .container {
+        display: flex;
+
+        .container-left {
+            margin-left: 22em;
+            margin-top: -10em;
+            margin-bottom: 5em;
+
+            .title {
+
+                p {
+                    font-family: "Poppins", sans-serif;
+                    font-size: 14px;
+                    font-weight: 600;
+                    color: #D9C3A9;
+                }
+
+                h2 {
+                    font-family: "Poppins", sans-serif;
+                    font-size: 50px;
+                    font-weight: bold;
+                    color: #4F5955;
+                    margin-top: -0.25em;
+                }
+            }
+
+            .main-text {
+
+                .cursive {
+                    width: 34%;
+                    font-style: italic;
+                    font-size: 17px;
+                    color: #535656;
+                    line-height: 1.5;
+                }
+
+                p {
+                    width: 38%;
+                    font-family: "Poppins", sans-serif;
+                    font-size: 14px;
+                    font-weight: 300;
+                    color: #535656;
+                }
+
+                img {
+                    margin-top: 1em;
+                }
+
+                .signature {
+                    font-family: "Poppins", sans-serif;
+                    font-size: 14px;
+                    font-weight: 300;
+                    margin-top: 0.5em;
+                    color: #535656;
+                }
+            }
+        }
+
+        .container-right {
+
+            .form-holder {
+                width: 25%;
+                position: absolute;
+                background-color: #FFFFFF;
+                top: 55%;
+                right: 12%;
+                
+
+
+                .form-title {
+                    background-color: #4F5955;
+                    padding: 1.45rem;
+                    position: relative;
+                    z-index: 1;
+
+                    h3 {
+                        color: #F2EDDC;
+                    }
+                }
+
+                .form-body {
+                    position: relative;
+                    z-index: 0;
+                    box-shadow: 0px 0px 5px 2px rgb(238, 238, 238);
+                }
+
+                form {
+                    display: grid;
+                    width: 80%;
+                    gap: 1rem;
+                    padding: 1.5rem;
+                    padding-left: 2.5em;
+
+
+                    p {
+                        font-family: "Poppins", sans-serif;
+                        font-weight: 300;
+                        font-size: 14px;
+                        font-style: italic;
+                        color: #535656;
+                    }
+
+                    input, textarea {
+                        padding: 0.8rem 0.8rem 0.8rem;
+                    }
+
+                    .input-name {
+                        height: 30px;
+                        border: 1px solid #EBEBEB;
+                    }
+
+                    .input-email {
+                        height: 30px;
+                        border: 1px solid #EBEBEB;
+                    }
+
+                    .input-phone {
+                        height: 30px;
+                        border: 1px solid #EBEBEB;
+                    }
+
+                    .input-type {
+                        height: 50px;
+                    }
+
+                    .input-name::placeholder,
+                    .input-email::placeholder,
+                    .input-phone::placeholder {
+                        font-style: italic;
+                        font-family: "Poppins", sans-serif;
+                        font-weight: 300;
+                        font-size: 13px;
+                        padding-left: 0.5em;
+                        color: #9C9EA6;
+                        opacity: 1;
+                    }
+
+                    .input-type {
+                        width: 100%;
+                        padding-left: 0.5em;
+                        font-size: 13px;
+                        border: 1px solid #EBEBEB;
+                        color: #535656;
+                        opacity: 1;
+                    }
+
+                    .btn-accent {
+                        margin-top: 20px;
+                        padding: 20px 45px;
+                        background-color: #F2EDDC;
+                        color: #4F5955;
+                        border: none;
+                        border-radius: 5px;
+                        cursor: pointer;
+                        transition: background-color 0.3s ease;
+                        font-size: 20px;
+                        font-family: "Poppins", sans-serif;
+                        font-weight: 600;
+
+                        &:hover {
+                            cursor: pointer;
+                            background-color: #000000;
+                            color: #EBEBEB;
+                        }
+                    }
+
+                    .input-type:focus {
+                        border-color: gray;
+                        outline: none;
+                    }
+                }
+            }
+        }
+    }
+}

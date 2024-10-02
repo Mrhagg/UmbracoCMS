@@ -1,0 +1,8 @@
+[
+  {
+    "outputFile": "wwwroot/css/scss/main.css",
+    "inputFile": "wwwroot/css/scss/main.scss",
+    "sourceMap": false,
+    "useNodeSass": false
+  }
+]
