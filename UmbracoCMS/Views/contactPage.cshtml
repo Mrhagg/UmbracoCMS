@@ -59,10 +59,10 @@
       <h2>@Model.Value("contactFormHeadline2")</h2>
       <p>@Model.Value("contactFormText")</p>
     </div>
-    <form action="#">
-      <input type="text" placeholder="Name">
-      <input type="text" placeholder="Phone">
-      <input type="text" placeholder="Email Address">
+    <form id="contactForm">
+      <input class="input-name"  type="text" placeholder="Name">
+      <input class="input-phone" type="text" placeholder="Phone">
+      <input class="input-email" type="text" placeholder="Email Address">
       
       <select class="input-type">
         <option value="financial-consulting">@Model.Value("contactInputText1")</option>
@@ -70,7 +70,7 @@
         <option value="marketing">@Model.Value("contactInputText3")</option>
         <option value="other">@Model.Value("contactInputText4")</option>
       </select>
-      <button class="btn-primary">@Model.Value("contactButtonText")</button>
+      <button class="btn-primary" type="submit">@Model.Value("contactButtonText")</button>
     </form>
   </div>
 </section>
@@ -80,3 +80,4 @@
     <img src="@contactPartnersImg">
   </div>
 </section>
+<script src="/scripts/contactFormValidation.js"></script>

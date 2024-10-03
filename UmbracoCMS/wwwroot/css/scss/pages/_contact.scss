@@ -206,7 +206,6 @@
             position: relative;
             top: 1em;
             width: 95%;
-
         }
 
         p {
@@ -217,14 +216,13 @@
             width: 550px;
             top: 4em;
             color: #535656;
-            
         }
     }
 
 
 
 
-    form {
+    #contactForm {
         display: grid;
         margin-bottom: 6em;
         grid-template-areas:
@@ -285,12 +283,20 @@
         height: 5.2em;
         width: 563px;
         margin-top: 1em;
-        
     }
 
     input {
         margin-top: 1em;
+    }
 
+    .input-error {
+        border: 2px solid red;
+        background-color: #ffe6e6;
+    }
+
+    .input-valid {
+        border: 2px solid green;
+        background-color: #e6ffe6;
     }
 
 

@@ -1150,41 +1150,41 @@ h5 {
   z-index: 0;
   box-shadow: 0px 0px 5px 2px rgb(238, 238, 238);
 }
-.main .container .container-right .form-holder form {
+.main .container .container-right .form-holder #contactForm {
   display: grid;
   width: 80%;
   gap: 1rem;
   padding: 1.5rem;
   padding-left: 2.5em;
 }
-.main .container .container-right .form-holder form p {
+.main .container .container-right .form-holder #contactForm p {
   font-family: "Poppins", sans-serif;
   font-weight: 300;
   font-size: 14px;
   font-style: italic;
   color: #535656;
 }
-.main .container .container-right .form-holder form input, .main .container .container-right .form-holder form textarea {
+.main .container .container-right .form-holder #contactForm input, .main .container .container-right .form-holder #contactForm textarea {
   padding: 0.8rem 0.8rem 0.8rem;
 }
-.main .container .container-right .form-holder form .input-name {
+.main .container .container-right .form-holder #contactForm .input-name {
   height: 30px;
   border: 1px solid #EBEBEB;
 }
-.main .container .container-right .form-holder form .input-email {
+.main .container .container-right .form-holder #contactForm .input-email {
   height: 30px;
   border: 1px solid #EBEBEB;
 }
-.main .container .container-right .form-holder form .input-phone {
+.main .container .container-right .form-holder #contactForm .input-phone {
   height: 30px;
   border: 1px solid #EBEBEB;
 }
-.main .container .container-right .form-holder form .input-type {
+.main .container .container-right .form-holder #contactForm .input-type {
   height: 50px;
 }
-.main .container .container-right .form-holder form .input-name::placeholder,
-.main .container .container-right .form-holder form .input-email::placeholder,
-.main .container .container-right .form-holder form .input-phone::placeholder {
+.main .container .container-right .form-holder #contactForm .input-name::placeholder,
+.main .container .container-right .form-holder #contactForm .input-email::placeholder,
+.main .container .container-right .form-holder #contactForm .input-phone::placeholder {
   font-style: italic;
   font-family: "Poppins", sans-serif;
   font-weight: 300;
@@ -1193,7 +1193,7 @@ h5 {
   color: #9C9EA6;
   opacity: 1;
 }
-.main .container .container-right .form-holder form .input-type {
+.main .container .container-right .form-holder #contactForm .input-type {
   width: 100%;
   padding-left: 0.5em;
   font-size: 13px;
@@ -1201,7 +1201,7 @@ h5 {
   color: #535656;
   opacity: 1;
 }
-.main .container .container-right .form-holder form .btn-accent {
+.main .container .container-right .form-holder #contactForm .btn-accent {
   margin-top: 20px;
   padding: 20px 45px;
   background-color: #F2EDDC;
@@ -1214,14 +1214,22 @@ h5 {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
 }
-.main .container .container-right .form-holder form .btn-accent:hover {
+.main .container .container-right .form-holder #contactForm .btn-accent:hover {
   cursor: pointer;
   background-color: #000000;
   color: #EBEBEB;
 }
-.main .container .container-right .form-holder form .input-type:focus {
+.main .container .container-right .form-holder #contactForm .input-type:focus {
   border-color: gray;
   outline: none;
+}
+.main .container .container-right .input-error {
+  border: 2px solid red;
+  background-color: #ffe6e6;
+}
+.main .container .container-right .input-valid {
+  border: 2px solid green;
+  background-color: #e6ffe6;
 }
 
 .home-services {
@@ -2254,27 +2262,27 @@ h5 {
   margin-bottom: 1em;
   color: #4F5955;
 }
-.contact-section .service-form {
+.contact-section #serviceForm {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.contact-section .service-form .form-row {
+.contact-section #serviceForm .form-row {
   display: flex;
   justify-content: space-between;
   gap: 20px;
   margin-bottom: 15px;
   width: 1173px;
 }
-.contact-section .service-form .input-field {
+.contact-section #serviceForm .input-field {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 1rem;
   box-sizing: border-box;
 }
-.contact-section .service-form .input-name,
-.contact-section .service-form .input-email {
+.contact-section #serviceForm .input-name,
+.contact-section #serviceForm .input-email {
   width: 571.27px;
   height: 52px;
   padding: 15px;
@@ -2283,10 +2291,10 @@ h5 {
   color: #AAAAAA;
   border: 1px solid #EBEBEB;
 }
-.contact-section .service-form ::placeholder {
+.contact-section #serviceForm ::placeholder {
   color: #AAAAAA;
 }
-.contact-section .service-form .input-question {
+.contact-section #serviceForm .input-question {
   width: 1173px;
   height: 175px;
   margin-bottom: 20px;
@@ -2299,7 +2307,15 @@ h5 {
   font-family: "Poppins", sans-serif;
   color: #AAAAAA;
 }
-.contact-section .service-form .btn-primary {
+.contact-section #serviceForm .input-error {
+  border: 2px solid red;
+  background-color: #ffe6e6;
+}
+.contact-section #serviceForm .input-valid {
+  border: 2px solid green;
+  background-color: #e6ffe6;
+}
+.contact-section #serviceForm .btn-primary {
   padding: 20px 40px;
   font-size: 16px;
   background-color: #4F5955;
@@ -2311,7 +2327,7 @@ h5 {
   align-self: flex-start;
   margin-top: 10px;
 }
-.contact-section .service-form .btn-primary:hover {
+.contact-section #serviceForm .btn-primary:hover {
   background-color: #F2EDDC;
   color: #4F5955;
 }
@@ -3247,7 +3263,7 @@ h5 {
   top: 4em;
   color: #535656;
 }
-.img-map form {
+.img-map #contactForm {
   display: grid;
   margin-bottom: 6em;
   grid-template-areas: "name-input phone" "email type" "button button";
@@ -3262,19 +3278,19 @@ h5 {
   top: 20em;
   right: 30em;
 }
-.img-map form .input-name {
+.img-map #contactForm .input-name {
   grid-area: name-input;
 }
-.img-map form .input-email {
+.img-map #contactForm .input-email {
   grid-area: email;
 }
-.img-map form .input-phone {
+.img-map #contactForm .input-phone {
   grid-area: phone;
 }
-.img-map form .input-type {
+.img-map #contactForm .input-type {
   grid-area: type;
 }
-.img-map form button {
+.img-map #contactForm button {
   grid-area: button;
   width: 20%;
   place-self: center;
@@ -3301,6 +3317,14 @@ h5 {
 }
 .img-map input {
   margin-top: 1em;
+}
+.img-map .input-error {
+  border: 2px solid red;
+  background-color: #ffe6e6;
+}
+.img-map .input-valid {
+  border: 2px solid green;
+  background-color: #e6ffe6;
 }
 .img-map .btn-primary {
   background-color: #4F5955;

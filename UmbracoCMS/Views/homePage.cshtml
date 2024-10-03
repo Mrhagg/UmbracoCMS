@@ -57,7 +57,7 @@
             <h3>@Model.Value("formHeadline")</h3>
           </div>
           <div class="form-body">
-            <form action="">
+            <form id="contactForm">
               <p>@Model.Value("formText")</p>
               <input class="input-name"  type="text" placeholder="Name">
               <input class="input-email" type="text" placeholder="Email address">
@@ -69,7 +69,7 @@
                 <option value="marketing">Marketing</option>
                 <option value="other">Other</option>
               </select>
-              <button class="btn-accent">@Model.Value("btnText")</button>
+              <button class="btn-accent" type="submit">@Model.Value("btnText")</button>
             </form>
           </div>
         </div>
@@ -187,3 +187,4 @@
         <img src="@partnersImage">
       </div>
     </section>
+    <script src="/scripts/contactFormValidation.js"></script>
